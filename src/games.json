@@ -3,36 +3,105 @@
     "id": "2048",
     "title": "2048",
     "url": "https://play2048.co/",
-    "description": "Join the numbers and get to the 2048 tile!"
+    "description": "Join the numbers and get to the 2048 tile!",
+    "thumbnail": "https://picsum.photos/seed/2048/400/225"
   },
   {
     "id": "tetris",
     "title": "Tetris",
     "url": "https://tetris.com/play-tetris",
-    "description": "The classic block-stacking puzzle game."
+    "description": "The classic block-stacking puzzle game.",
+    "thumbnail": "https://picsum.photos/seed/tetris/400/225"
   },
   {
     "id": "snake",
     "title": "Snake",
     "url": "https://www.google.com/logos/2010/pacman10-i.html",
-    "description": "Classic arcade fun."
+    "description": "Classic arcade fun.",
+    "thumbnail": "https://picsum.photos/seed/snake/400/225"
   },
   {
     "id": "chess",
     "title": "Chess",
     "url": "https://www.chess.com/play/computer",
-    "description": "Test your strategy against the computer."
+    "description": "Test your strategy against the computer.",
+    "thumbnail": "https://picsum.photos/seed/chess/400/225"
   },
   {
     "id": "pacman",
     "title": "Pac-Man",
     "url": "https://www.google.com/logos/2010/pacman10-i.html",
-    "description": "The original dot-eating classic."
+    "description": "The original dot-eating classic.",
+    "thumbnail": "https://picsum.photos/seed/pacman/400/225"
   },
   {
     "id": "minesweeper",
     "title": "Minesweeper",
     "url": "https://minesweeper.online/game/1",
-    "description": "Clear the board without hitting a mine."
+    "description": "Clear the board without hitting a mine.",
+    "thumbnail": "https://picsum.photos/seed/mines/400/225"
+  },
+  {
+    "id": "subway-surfers",
+    "title": "Subway Surfers",
+    "url": "https://poki.com/en/g/subway-surfers",
+    "description": "Dash as fast as you can! Dodge the oncoming trains!",
+    "thumbnail": "https://picsum.photos/seed/subway/400/225"
+  },
+  {
+    "id": "slope",
+    "title": "Slope",
+    "url": "https://slopegame.online/",
+    "description": "A fast-paced 3D running game.",
+    "thumbnail": "https://picsum.photos/seed/slope/400/225"
+  },
+  {
+    "id": "temple-run-2",
+    "title": "Temple Run 2",
+    "url": "https://poki.com/en/g/temple-run-2",
+    "description": "Run from the demon monkeys!",
+    "thumbnail": "https://picsum.photos/seed/temple/400/225"
+  },
+  {
+    "id": "crossy-road",
+    "title": "Crossy Road",
+    "url": "https://poki.com/en/g/crossy-road",
+    "description": "Why did the chicken cross the road?",
+    "thumbnail": "https://picsum.photos/seed/crossy/400/225"
+  },
+  {
+    "id": "retro-bowl",
+    "title": "Retro Bowl",
+    "url": "https://poki.com/en/g/retro-bowl",
+    "description": "The perfect game for the armchair quarterback.",
+    "thumbnail": "https://picsum.photos/seed/football/400/225"
+  },
+  {
+    "id": "1v1-lol",
+    "title": "1v1.LOL",
+    "url": "https://1v1.lol/",
+    "description": "Competitive third-person shooter and building game.",
+    "thumbnail": "https://picsum.photos/seed/1v1/400/225"
+  },
+  {
+    "id": "minecraft-classic",
+    "title": "Minecraft Classic",
+    "url": "https://classic.minecraft.net/",
+    "description": "The original Minecraft in your browser.",
+    "thumbnail": "https://picsum.photos/seed/minecraft/400/225"
+  },
+  {
+    "id": "bitlife",
+    "title": "BitLife",
+    "url": "https://poki.com/en/g/bitlife-life-simulator",
+    "description": "How will you live your BitLife?",
+    "thumbnail": "https://picsum.photos/seed/life/400/225"
+  },
+  {
+    "id": "fnf",
+    "title": "Friday Night Funkin'",
+    "url": "https://poki.com/en/g/friday-night-funkin",
+    "description": "A rhythm game where you battle for your girlfriend's heart.",
+    "thumbnail": "https://picsum.photos/seed/funkin/400/225"
   }
 ]

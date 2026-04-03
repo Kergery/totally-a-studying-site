@@ -143,7 +143,13 @@ export default function App() {
                 className="bg-zinc-900 border border-white/10 rounded-2xl overflow-hidden cursor-pointer group hover:border-indigo-500/50 transition-colors"
                 onClick={() => openGame(game)}
               >
-                <div className="aspect-video bg-zinc-800 flex items-center justify-center relative overflow-hidden">
+                <div className="aspect-video bg-zinc-800 flex items-center justify-center relative overflow-hidden border-b-4 border-indigo-600/30 group-hover:border-indigo-600 transition-colors">
+                  <img 
+                    src={game.thumbnail} 
+                    alt={game.title}
+                    className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity"
+                    referrerPolicy="no-referrer"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent opacity-60" />
                   <div className="absolute inset-0 bg-indigo-600/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                   <Gamepad2 className="w-12 h-12 text-zinc-700 group-hover:text-indigo-400 transition-colors z-10" />
@@ -173,28 +179,57 @@ export default function App() {
                   <h2 className="text-2xl font-black italic uppercase tracking-tighter text-indigo-400">
                     {selectedGame.title}
                   </h2>
-                  <button 
-                    onClick={() => setSelectedGame(null)}
-                    className="text-white hover:text-red-500 flex items-center gap-2 font-bold uppercase text-xs tracking-widest bg-white/5 px-4 py-2 rounded-full transition-all"
-                  >
-                    <X className="w-4 h-4" /> Close
-                  </button>
+                  <div className="flex items-center gap-4">
+                    <button 
+                      onClick={() => {
+                        const iframe = document.querySelector('iframe');
+                        if (iframe) {
+                          if (iframe.requestFullscreen) {
+                            iframe.requestFullscreen();
+                          } else if (iframe.webkitRequestFullscreen) {
+                            iframe.webkitRequestFullscreen();
+                          } else if (iframe.msRequestFullscreen) {
+                            iframe.msRequestFullscreen();
+                          }
+                        }
+                      }}
+                      className="text-white hover:text-indigo-400 flex items-center gap-2 font-bold uppercase text-xs tracking-widest bg-white/5 px-4 py-2 rounded-full transition-all"
+                    >
+                      Fullscreen
+                    </button>
+                    <button 
+                      onClick={() => setSelectedGame(null)}
+                      className="text-white hover:text-red-500 flex items-center gap-2 font-bold uppercase text-xs tracking-widest bg-white/5 px-4 py-2 rounded-full transition-all"
+                    >
+                      <X className="w-4 h-4" /> Close
+                    </button>
+                  </div>
                 </div>
                 
-                <div className="game-container relative border-4 border-zinc-800 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-                  {gameLoading ? (
-                    <div className="absolute inset-0 bg-zinc-900 flex flex-col items-center justify-center">
-                      <div className="w-64 h-2 bg-zinc-800 rounded-full overflow-hidden mb-4">
-                        <motion.div 
-                          initial={{ width: 0 }}
-                          animate={{ width: "100%" }}
-                          transition={{ duration: 1.2, ease: "easeInOut" }}
-                          className="h-full bg-indigo-600"
-                        />
-                      </div>
-                      <p className="text-indigo-400 text-xs font-bold animate-pulse tracking-[0.3em] uppercase">Loading Flash Engine...</p>
+                  <div className="game-container relative border-4 border-zinc-800 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                    <div className="absolute top-2 left-2 z-20 flex items-center gap-1 opacity-40">
+                      <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                      <span className="text-[8px] font-black text-white uppercase tracking-tighter">Flash Player 11.2</span>
                     </div>
-                  ) : (
+                    {gameLoading ? (
+                      <div className="absolute inset-0 bg-zinc-900 flex flex-col items-center justify-center">
+                        <div className="mb-8 relative">
+                          <div className="w-20 h-20 border-4 border-indigo-600 rounded-full animate-spin border-t-transparent" />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <span className="text-2xl font-black text-indigo-400 italic">f</span>
+                          </div>
+                        </div>
+                        <div className="w-64 h-1.5 bg-zinc-800 rounded-full overflow-hidden mb-4">
+                          <motion.div 
+                            initial={{ width: 0 }}
+                            animate={{ width: "100%" }}
+                            transition={{ duration: 1.2, ease: "easeInOut" }}
+                            className="h-full bg-indigo-600"
+                          />
+                        </div>
+                        <p className="text-indigo-400 text-[10px] font-bold animate-pulse tracking-[0.4em] uppercase">Initializing Flash Engine...</p>
+                      </div>
+                    ) : (
                     <iframe 
                       src={selectedGame.url} 
                       className="w-full h-full border-none"

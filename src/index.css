@@ -19,12 +19,14 @@
 }
 
 .game-container {
-  width: 90%;
-  height: 80vh;
+  width: 85%;
+  height: 75vh;
   margin: 0 auto;
   background: #000;
-  border-radius: 1rem;
+  border: 8px solid #333;
+  border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.1);
+  position: relative;
 }
 
